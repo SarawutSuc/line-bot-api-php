@@ -29,6 +29,9 @@ if ( sizeof($request_array['events']) > 0 )
 		else if(($text== "ตอนนี้อยู่ที่ไหน")||($text== "ตอนนี้อยู่ไหน")||($text== "อยู่ที่ไหน")||($text== "อยู่ไหน")){
 			$reply_message = 'ขณะนี้อยู่ที่โรงไฟฟ้าบางปะกง!!';
 		}
+	   	else if(intval($text) <= 2000){
+			$reply_message = 'ปรับ';
+		}
 		else
 		{
 			$reply_message = 'ระบบได้รับข้อความ_ ('.$text.') ของคุณแล้ว';
